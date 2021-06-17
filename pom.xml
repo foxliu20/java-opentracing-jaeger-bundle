@@ -78,8 +78,8 @@
 
   <distributionManagement>
     <repository>
-      <id>bintray</id>
-      <url>https://api.bintray.com/maven/opentracing/maven/opentracing-jaeger-client-bundle/;publish=1</url>
+      <id>github.com</id>
+      <url>https://maven.pkg.github.com/foxliu20/java-opentracing-jaeger-bundle</url>
     </repository>
     <snapshotRepository>
       <id>jfrog-snapshots</id>

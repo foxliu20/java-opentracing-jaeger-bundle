@@ -19,7 +19,7 @@
 
   <groupId>io.opentracing.contrib</groupId>
   <artifactId>java-opentracing-jaeger-parent</artifactId>
-  <version>1.6.0</version>
+  <version>1.6.0-ec</version>
   <packaging>pom</packaging>
 
   <modules>

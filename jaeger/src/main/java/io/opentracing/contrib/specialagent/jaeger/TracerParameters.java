@@ -6,6 +6,8 @@ import java.util.logging.Logger;
 
 import io.opentracing.contrib.specialagent.common.Configuration;
 
+import static io.opentracing.contrib.specialagent.jaeger.Configuration.JAEGER_TTL_SCOPE;
+
 public final class TracerParameters {
   private TracerParameters() {}
 
@@ -14,8 +16,13 @@ public final class TracerParameters {
   private final static Logger logger = Logger.getLogger(TracerParameters.class.getName());
 
   public static void loadParameters() {
+    defaultParameters();
     Properties props = Configuration.loadConfigurationFile();
     loadParametersIntoSystemProperties(props);
+  }
+
+  private static void defaultParameters() {
+    System.setProperty(JAEGER_TTL_SCOPE, "true");
   }
 
   static void loadParametersIntoSystemProperties(Properties props) {

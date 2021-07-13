@@ -2,6 +2,7 @@ package io.opentracing.contrib.specialagent.jaeger;
 
 import javax.annotation.Priority;
 
+import io.jaegertracing.internal.JaegerTracer;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.tracerresolver.TracerFactory;
 
@@ -14,7 +15,7 @@ public class JaegerTracerFactory implements TracerFactory
   }
 
   @Override
-  public Tracer getTracer() {
+  public JaegerTracer getTracer() {
     return Configuration.fromEnv().getTracer();
   }
 }
